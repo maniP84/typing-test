@@ -1,0 +1,18 @@
+.container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #340dff;
+    padding: 0 40px;
+    z-index: 3;
+}
+.name {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}

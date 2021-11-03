@@ -1,0 +1,59 @@
+.container {
+    display: grid;
+    place-items: center;
+}
+.wpmContainer {
+    width: 25rem;
+    height: fit-content;
+    background-color: #425664;
+    border-radius: 10px;
+    margin-top: -1rem;
+    padding-bottom: 2rem;
+    z-index: 0;
+}
+.yourTest {
+    margin-left: 7rem;
+    color: #ffffff;
+    font-size: 2rem;
+}
+.wpm {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.7rem;
+    margin: 1rem;
+}
+
+.best {
+    color: #ffffff;
+    font-size: 1.7rem;
+    text-align: center;
+
+}
+.scoreContainer {
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+    display:flex;
+    margin: auto;
+    margin-top: 3rem;
+}
+.retake {
+    border: none;
+    background-color:#340dff; 
+    border-radius: 2rem;
+    width: 8rem;
+    height: 3rem;
+    font-size: 18px;
+    transition: 0.5s all ease-in;
+    margin-top: 1rem;
+    z-index: 2;
+    margin-left: 8rem;
+}
+.retake a{
+    color: #ffffff;
+    list-style: none;
+    text-decoration: none;
+}
+.retake:hover {
+   background-color:#a7b2c7;
+}

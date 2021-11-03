@@ -1,0 +1,14 @@
+.App-link {
+    color: #61dafb;
+}
+.textStyle{
+  color: green;
+  font-size: 1.3rem;
+  background-color: #16ff98;
+  width: fit-content;
+}
+.falseTextStyle {
+  color: red;
+  background-color: #ff9392;
+  font-size: 1.3rem;
+}
