@@ -7,6 +7,7 @@ const Test = (props) => {
   const {second, minutes, type, text, startState, num} = props
   const spanTag = document.querySelectorAll ("span")
   const [value, setValue] = useState("")
+  const spans = useRef()
   // const [type, setType] = useState("")
   // const [text, setText] = useState(["hello im mani and im 16 years old"]) 
   // const [num, setnum] = useState(0)
@@ -27,23 +28,8 @@ const Test = (props) => {
         spanTag[typeSplit.length - 1].className = "falseTextStyle"
       }
       input.current.focus()
-      // if(typeSplitBySpace[num] === textSpaceSplit[num]) {
-      //   setnum(prevNum => prevNum + 1)
-        
-      // }
     },[type, text, second])
     
-    
-    // const typeHandler = event => {
-    //   setType(event.target.value)
-    //   // setKey(event.nativeEvent.data)
-    //   console.log(event.nativeEvent.data)
-    //   console.log(textSplit[0])
-    //   if(event.nativeEvent.data === textSplit[0] && startState) {
-    //     start()
-    //   }
-      
-    // }
     
     const backSpace = event => {
       if(event.keyCode === 8 && typeSplit.length > 0) {
@@ -52,39 +38,20 @@ const Test = (props) => {
       }
       
     }
-    // function start() {
-    //   console.log("masjisdkfj")
-    //   setStartState(false)
-    //   setMinutes(0)
-    //   setSecond(30)
-    //   interval = setInterval(() => {
-    //     setSecond(pverSecond => pverSecond -1)
-    //   },1000)
-    // }
-    const onpaste = event => {
-      const paste = event.clipboardData.getData("text/plain")
-      if((paste.match(/[-.]/))) return
-      setValue(paste)
-      console.log(paste)
 
-    }
-    if(second === 0 && !startState) {
-      props.history.push('/result')
-    }
     return (
         <div className={styles.container}>
         <div>
             <p className={styles.timer}>{minutes}:{second <= 9 ? "0" + second : second}</p>
         </div>
           <div className={styles.inputContainer}>
-        <input ref={input} type="text" onPaste={onpaste} onClo value={type} onKeyDown={backSpace} onChange={props.typeHandler}/>
+        <input ref={input} type="text" value={type} onKeyDown={backSpace} onChange={props.typeHandler}/>
           <p className={styles.text}>
             {
-                textSplit.map(text => <span className="span">{text}</span>)
+                textSplit.map(text => <span ref={spans} className="span">{text}</span>)
             }
           </p>
           </div>
-        {/* <span>{num}</span> */}
             </div>
     );
 };

@@ -9,11 +9,10 @@ import Main from './Components/Main';
 import Navbar from './Components/Navbar';
 import Result from './Components/Result';
 import { createRef } from 'react/cjs/react.production.min';
-//svg 
-import timerSVG from "./assets/stopwatch-solid.svg"
 var interval;
 
 function App(props) {
+  const spanTag = document.querySelectorAll ("span")
   let ul = useRef()
   let selectTime = useRef()
   let icon = useRef()
@@ -25,16 +24,19 @@ function App(props) {
   const [showMain, setShowMain] = useState(true)
   const [liValue, setLiValue] = useState(59)
   const [viseble, setVisble] = useState(true)
-  const [text, setText] = useState(["hello, I'm nita everybody says I'm kosdast and I'm here to test it. mani I want to say you are amazing. if I get here I'm not kosdast anymore"]) 
+  const [text, setText] = useState(["You're waiting for a train. A train that will take you far away. You know where you hope the train will take you, but you can't know for sure. Yet it doesn't matter. Now, tell me why?"]) 
   const [num, setnum] = useState(0)
   let textSplit = text[0].split("")
   const textSpaceSplit = text[0].split(" ")
   const typeSplitBySpace = type.split(" ")
   
   
-  
+
   const typeHandler = event => {
-    setType(event.target.value)
+    if(event.nativeEvent.data !== null) {
+      setType(event.target.value)
+    }
+    console.log(event.nativeEvent.data)
     if(type.length === 0 && event.target.value !== textSplit[0] ) {
       setType("")
     }
@@ -49,6 +51,7 @@ function App(props) {
     if(typeSplitBySpace[num] === textSpaceSplit[num]) {
       setnum(prevNum => prevNum + 1)
     }
+    // console.log(spanTag)
   },[type, text, second])
   
   function start() {
@@ -105,7 +108,7 @@ const selectHandler = () => {
       setVisble(true)
   }
 } 
-  
+
   return (
     <BrowserRouter>
     <Navbar/>
