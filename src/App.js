@@ -29,11 +29,13 @@ function App(props) {
   let textSplit = text[0].split("")
   const textSpaceSplit = text[0].split(" ")
   const typeSplitBySpace = type.split(" ")
+  let typeSplit = type.split("")
   
   
 
   const typeHandler = event => {
-    if(event.nativeEvent.data !== null) {
+    console.log(event)
+    if(event.nativeEvent.data !== null || event.nativeEvent.inputType === "deleteContentBackward") {
       setType(event.target.value)
     }
     console.log(event.nativeEvent.data)
@@ -43,6 +45,13 @@ function App(props) {
 
     if(event.nativeEvent.data === textSplit[0] && startState) {
       start()
+    }
+    
+  }
+  const backSpace = event => {
+    if(event.keyCode === 8 && typeSplit.length > 0) {
+      spanTag[typeSplit.length - 1].className = "spans"
+      
     }
     
   }
@@ -130,7 +139,7 @@ const selectHandler = () => {
         </div> */}
       <Switch>
         <Route path="/result" render={() => <Result reTakeHandler={reTakeHandler} timer={liValue} currect={num}/>}/>
-        <Route path="/test" render={(props) => <Test select={select} typeHandler={typeHandler} second={second} minutes={minutes} type={type} startState={startState} text={text} num={num} {...props}/>}/>
+        <Route path="/test" render={(props) => <Test select={select} backSpace={backSpace} typeHandler={typeHandler} second={second} minutes={minutes} type={type} startState={startState} text={text} num={num} {...props}/>}/>
         <Route path="/" render={(props) => <Main selectHandler={selectHandler} viseble={viseble} icon={icon} ul={ul} selectTime={selectTime} choses29={choses29} choses59={choses59} event={secondButtonHandler} {...props}/>}/>
       </Switch>
     </BrowserRouter>
