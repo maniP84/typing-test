@@ -31,15 +31,32 @@ const Test = (props) => {
     },[type, text, second])
     
     
+    const backSpace = event => {
+      if(event.keyCode === 8 && typeSplit.length > 0) {
+        spanTag[typeSplit.length - 1].className = "spans"
+        
+      }
+      
+    }
 
-
+    // const onPaste = event => {
+    //   console.log(event)
+      
+    //   const paste = event.clipboardData.getData("text/plain")
+    //   if((paste.match(/[-.]/))) return
+    //   setValue(paste)
+    //   console.log(paste)
+    // }
+      if(second === 0 && !startState) {
+      props.history.push('/result')
+    }
     return (
         <div className={styles.container}>
         <div>
             <p className={styles.timer}>{minutes}:{second <= 9 ? "0" + second : second}</p>
         </div>
           <div className={styles.inputContainer}>
-        <input ref={input} type="text" value={type} onKeyDown={props.backSpace} onChange={props.typeHandler}/>
+        <input ref={input} type="text" value={type} onKeyDown={backSpace} onChange={props.typeHandler}/>
           <p className={styles.text}>
             {
                 textSplit.map(text => <span ref={spans} className="span">{text}</span>)

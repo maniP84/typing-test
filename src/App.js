@@ -73,6 +73,7 @@ function App(props) {
   }
   if(second === 0) {
     clearInterval(interval)
+    
   }
   
   const secondButtonHandler = () => {
