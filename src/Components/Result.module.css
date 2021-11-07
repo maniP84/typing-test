@@ -9,7 +9,6 @@
     border-radius: 10px;
     margin-top: -1rem;
     padding-bottom: 2rem;
-    z-index: 0;
 }
 .yourTest {
     margin-left: 7rem;
@@ -27,7 +26,6 @@
     color: #ffffff;
     font-size: 1.7rem;
     text-align: center;
-
 }
 .scoreContainer {
     width: 100%;
@@ -36,6 +34,10 @@
     display:flex;
     margin: auto;
     margin-top: 3rem;
+}
+.buttonContainer {
+    margin: auto;
+    width: fit-content;
 }
 .retake {
     border: none;
@@ -46,8 +48,7 @@
     font-size: 18px;
     transition: 0.5s all ease-in;
     margin-top: 1rem;
-    z-index: 2;
-    margin-left: 8rem;
+    cursor: pointer;
 }
 .retake a{
     color: #ffffff;
@@ -56,4 +57,34 @@
 }
 .retake:hover {
    background-color:#a7b2c7;
+}
+
+@media (max-width: 440px) {
+    .wpmContainer {
+        width: 20rem;
+    }
+    .yourTest {
+        font-size: 1.4rem;
+        margin-left: 4rem;
+    }
+    .best {
+        font-size: 1.3rem;
+        width: fit-content;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    .wpm {
+        font-size: 1.4rem;
+        width: fit-content;
+        margin: auto;
+    }
+    .scoreContainer {
+        width: fit-content;
+        margin: auto;
+        margin-top: 2.5rem;
+    }
+    .retake {
+        margin-left: 0;
+    }
+
 }

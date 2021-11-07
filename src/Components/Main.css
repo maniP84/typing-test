@@ -35,7 +35,7 @@
     list-style: none;
     overflow: hidden;
     transition: 0.3s ease;
-    margin-left: 2rem;
+    margin-left: 2.2rem;
 
 }
 .ul-visble li {
@@ -58,4 +58,14 @@
     margin-top: 0.7rem;
     font-size: 1.6rem;
     transition: 0.3s ease;
+}
+@media (max-width: 440px) {
+    .ul-visble {
+        font-size: 1.4rem;
+        margin-left: 1.2rem;
+    }
+    .fa-chevron-down {
+        left: 16rem;
+        font-size: 1.4rem;
+    }
 }

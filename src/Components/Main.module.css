@@ -24,10 +24,7 @@
     margin-top: -2rem;
     text-align: center;
 } 
-/* .select {
-    color: #ffffff;
-    text-align: center;
-} */
+
 .selectSecond {
     background-color:#ffffff ;
     border-radius: 40px;
@@ -67,4 +64,15 @@
 .select {
   color: #ffffff;
   text-align: center;
+}
+@media (max-width: 440px) {
+  .wellcome {
+    font-size: 1.8rem;
+  }
+  .check {
+    font-size: 1rem;
+  }
+  .selectSecond {
+    font-size: 1.4rem;
+  }
 }

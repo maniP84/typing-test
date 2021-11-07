@@ -12,13 +12,10 @@ const Result = (props) => {
     const [Lstorage, setLStorage] = useState(localStorage.getItem("WPM"))
     
     
-    console.log(Lstorage)
     useEffect(() => {
         if(props.timer === 29) {
             setWPM(WPM *2)
         }
-        console.log(localStorage.getItem("WPM"))
-        console.log(Lstorage)
         if(Lstorage === null || WPM > localStorage.getItem("WPM")) {
             localStorage.setItem("WPM", WPM)
         }
@@ -35,9 +32,10 @@ const Result = (props) => {
                 </div>
               <p className={styles.wpm}>WPM: {WPM}</p>
               <p className={styles.best}>Your best score: {Lstorage} WPM</p>
-              <button onClick={props.reTakeHandler} className={styles.retake}><Link to="/">Retake Test</Link></button>
+              <div className={styles.buttonContainer}>
+                <button onClick={props.reTakeHandler} className={styles.retake}><Link to="/">Retake Test</Link></button>
+              </div>
             </div>
-            
         </div>
     );
 };

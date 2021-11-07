@@ -1,11 +1,12 @@
 .container {
+    position: relative;
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #340dff;
     padding: 0 40px;
-    z-index: 3;
+    z-index: 20;
 }
 .name {
     color: #ffffff;

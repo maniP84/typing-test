@@ -8,7 +8,6 @@ import Test from "./Components/Test"
 import Main from './Components/Main';
 import Navbar from './Components/Navbar';
 import Result from './Components/Result';
-import { createRef } from 'react/cjs/react.production.min';
 var interval;
 
 function App(props) {

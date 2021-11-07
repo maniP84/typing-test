@@ -8,16 +8,7 @@ const Test = (props) => {
   const spanTag = document.querySelectorAll ("span")
   const [value, setValue] = useState("")
   const spans = useRef()
-  // const [type, setType] = useState("")
-  // const [text, setText] = useState(["hello im mani and im 16 years old"]) 
-  // const [num, setnum] = useState(0)
-  // const [minutes, setMinutes] = useState(1)
-  // const [second, setSecond] = useState(0)
-  // const [startState, setStartState] = useState(true)
-  // const [key, setKey] = useState("")
   const textSplit = text[0].split("")
-  // const textSpaceSplit = text[0].split(" ")
-  // const typeSplitBySpace = type.split(" ")
   let typeSplit = type.split("")
   useEffect(() => {
     if(typeSplit[typeSplit.length - 1] === textSplit[typeSplit.length - 1] && typeSplit.length > 0 ) {
@@ -38,15 +29,7 @@ const Test = (props) => {
       }
       
     }
-
-    // const onPaste = event => {
-    //   console.log(event)
-      
-    //   const paste = event.clipboardData.getData("text/plain")
-    //   if((paste.match(/[-.]/))) return
-    //   setValue(paste)
-    //   console.log(paste)
-    // }
+    
       if(second === 0 && !startState) {
       props.history.push('/result')
     }

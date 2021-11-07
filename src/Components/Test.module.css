@@ -29,6 +29,7 @@ input {
 .text {
     position: absolute;
     top: 2.5rem;
+    color: #5e6060;
     margin-left: 4rem;
     line-height: 4rem;
     line-clamp: 10px;
@@ -46,4 +47,17 @@ input {
 .timer {
     color:#340dff ;
     font-size: 3rem;
+}
+
+@media (max-width: 440px) {
+    .inputContainer {
+        width: 20rem;
+    }
+    .text {
+        font-size: 1rem;
+        top: 1rem;
+        margin-left: 2rem;
+        line-height: 3rem;
+        line-clamp: 7px;
+    }
 }
