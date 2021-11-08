@@ -11,6 +11,7 @@
     border-radius: 10px;
     padding: 2rem;
     z-index: -1;
+    -webkit-tap-highlight-color: transparent;
 }
 .wellcome {
     color: #ffffff;
@@ -39,7 +40,10 @@
     padding-left: 1rem;
     -webkit-user-select: none;
 }
-
+.buttonContainer {
+  margin: auto;
+  width: fit-content;
+}
 .start {
   border: none;
   background-color:#340dff; 
@@ -50,7 +54,7 @@
   transition: 0.5s all ease-in;
   margin-top: 3rem;
   z-index: 2;
-  margin-left: 8rem;
+  /* margin-left: 8rem; */
 }
 .start a{
   color: #ffffff;

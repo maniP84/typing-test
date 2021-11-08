@@ -3,7 +3,6 @@
     background-color: #ffffff;
     font-size: 1.7rem;
     padding: 0;
-    cursor: pointer;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -16,6 +15,7 @@
     margin-left: 2rem;
     list-style: none;
     opacity: 0;
+    pointer-events: none;
 }
 .ul-visble {
     position: absolute;
@@ -36,7 +36,6 @@
     overflow: hidden;
     transition: 0.3s ease;
     margin-left: 2.2rem;
-
 }
 .ul-visble li {
     margin-top: 0.5rem;
@@ -60,12 +59,16 @@
     transition: 0.3s ease;
 }
 @media (max-width: 440px) {
+    .ul {
+        margin-left: 1.2rem;
+    }
     .ul-visble {
         font-size: 1.4rem;
         margin-left: 1.2rem;
     }
     .fa-chevron-down {
         left: 16rem;
+        margin-top: 0.9rem;
         font-size: 1.4rem;
     }
 }

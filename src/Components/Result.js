@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-//components
-import Navbar from './Navbar';
 //styles
 import styles from "./Result.module.css"
 import "./Result.css"
