@@ -23,7 +23,6 @@ function App() {
   const [showMain, setShowMain] = useState(true)
   const [liValue, setLiValue] = useState(59)
   const [viseble, setVisble] = useState(true)
-  // const [textRandom, setTextRandom] = ([(Math.round(Math.random() * 2))])
   const [text, setText] = useState(["Oceans and lakes have much in common, but they are also quitedifferent. Both are bodies of water, but oceans are very large bodiesof salt water, while lakes are much smaller bodies of fresh water.Lakes are usually surrounded by land, while oceans are what surroundcontinents. Both have plants and animals living in them. The ocean ishome to the largest animals on the planet, whereas lakes support muchsmaller forms of life." ,"Ants are found everywhere in the world. They make their homein buildings, gardens, etc. They live in anthills. Ants are veryhardworking insects. Throughout the summers they collect food forthe winter season. Whenever they find a sweet on the floor, theystick to the sweet and carry it to their home. Thus, in this way, theyclean the floor. Ants are generally red and black in colour. Theyhave two eyes and six legs. They are social insects. ", "The stars are tiny points of light in the space. On a clear night wecan see around 2,000 to 3,000 stars without using a telescope. Starslook tiny in the sky because they are far away from the Earth. Inancient times the sky watchers found patterns of stars in the sky. "]) 
   const [num, setnum] = useState(0)
   let textSplit = text[textRandom].split("")
