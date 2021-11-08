@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {BrowserRouter, Switch, Route, Redirect, Link } from 'react-router-dom';
+import {BrowserRouter, Switch, Route, } from 'react-router-dom';
 
-import styles from "./App.module.css"
 import "./App.css"
 //Components
 import Test from "./Components/Test"
@@ -11,7 +10,7 @@ import Result from './Components/Result';
 let interval;
 const textRandom = (Math.round(Math.random() * 2))
 
-function App(props) {
+function App() {
   const spanTag = document.querySelectorAll ("span")
   let ul = useRef()
   let selectTime = useRef()
@@ -61,7 +60,6 @@ function App(props) {
   },[type, text, second])
   
   function start(event) {
-    // event.preventDefault()
     setStartState(false)
     setMinutes(0)
     setSecond(liValue)
@@ -76,7 +74,6 @@ function App(props) {
   
   const secondButtonHandler = () => {
     setShowMain(false)
-    // props.router.push('/test')
     if(liValue === 29) {
       setMinutes(0)
       setType("")
