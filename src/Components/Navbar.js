@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className={styles.container}>
             <div className={styles.name}>
-                Typeing test 
+                Typing test
             </div>
             <div>
                 <Link to="/">Main Page</Link>
