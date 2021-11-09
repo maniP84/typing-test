@@ -24,12 +24,16 @@ const Test = (props) => {
     },[type, text, second])
     
     
-    const backSpace = event => {
-      if(event.keyCode === 8 && typeSplit.length > 0) {
-        spanTag[typeSplit.length - 1].className = "spans"
+    // const backSpace = event => {
+    // console.log("sdsdf")
+    //   if(event.keyCode === 8 && typeSplit.length > 0) {
+    //     spanTag[typeSplit.length - 1].className = "spans"
         
-      }
+    //   }
       
+    // }
+    const keyCodeHandler = event => {
+      console.log("im dsdr")
     }
 
       if(second === 0 && !startState) {
@@ -41,7 +45,7 @@ const Test = (props) => {
             <p className={styles.timer}>{minutes}:{second <= 9 ? "0" + second : second}</p>
         </div>
           <div className={styles.inputContainer}>
-        <input ref={input} type="text" value={type} onKeyDown={backSpace} onChange={typeHandler}/>
+        <input ref={input} type="text" OnKeyListener={keyCodeHandler} value={type} onChange={typeHandler}/>
           <p className={styles.text}>
             {
                 textSplit.map(text => <span className="span">{text}</span>)
