@@ -11,8 +11,11 @@ const Result = (props) => {
     
     
     useEffect(() => {
+        console.log(props.timer)
         if(props.timer === 29) {
+            console.log(localStorage.getItem("WPM"))
             setWPM(WPM *2)
+            localStorage.setItem("WPM", WPM * 2)
         }
         if(Lstorage === null || WPM > localStorage.getItem("WPM")) {
             localStorage.setItem("WPM", WPM)

@@ -83,6 +83,7 @@ function App() {
     setVisble(true)
     icon.current.style.transform = "rotate(0deg)"
     setLiValue(event.target.value)
+    console.log(event.target.value)
   }
   const choses29 = event => {
     selectTime.current.innerHTML = event.target.innerHTML
@@ -90,6 +91,7 @@ function App() {
     setVisble(true)
     icon.current.style.transform = "rotate(0deg)"
     setLiValue(event.target.value)
+    console.log(event.target.value)
   }
   const reTakeHandler = () => {
     setMinutes(1)
